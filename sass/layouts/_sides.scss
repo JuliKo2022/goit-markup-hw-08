@@ -1,0 +1,39 @@
+.sides-list {
+  display: flex;
+}
+
+.sides-list__item {
+  width: 270px;
+  margin-right: 30px;
+  
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.sides-list__title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.sides-list__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--second-text-color);
+}
+
+.sides-list__icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background-color: var(--btn-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
