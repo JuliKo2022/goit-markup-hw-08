@@ -6,18 +6,41 @@
 }
 
 .footer .container {
-  display: flex;
-  align-items: baseline;
+  display: block;
+  width: 100%;
+
+  @include desktop {
+    width: 768px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include desktop {
+    width: 1200px;
+    display: flex;
+    align-items: baseline;
+  }
+
 }
 
 .address-contact {
-  margin-right: 70px;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 0;
+  }
+  @include desktop {
+    margin-right: 75px;
+  }
 }
 
 .footer .logo {
   margin-bottom: 20px;
+  margin-right: 0;
+  text-align: center;
 
   color: #ffffff;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .footer-address {
@@ -26,6 +49,10 @@
   font-size: 14px;
   line-height: 1.71;
   color: var(--other-text-color);
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .footer-contact {
@@ -34,10 +61,26 @@
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
 }
-
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // @include desktop {
+  //   justify-content: left;
+  // }
+}
 .footer-list .item {
+  display: flex;
+  justify-content: center;
   margin-bottom: 9px;
+  @include desktop {
+    justify-content: left;
+  }
 }
 
 .footer-list .item:last-child {
@@ -51,10 +94,19 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .footer-soc-list {
   display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .footer-soc-item {
@@ -85,9 +137,26 @@
   fill: #ffffff;
 }
 
+.footer-cont {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
 .footer-send {
-  margin-left: 86px;
-  width: 570px;
+  width: 100%;
+  @include desktop {
+    margin-left: auto;
+    width: 570px;
+  }
 }
 
 .footer-form-item {
@@ -96,16 +165,31 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
+  text-align: center;
   margin-bottom: 20px;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .footer-form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  @include desktop {
+    flex-direction: row;
+    justify-content: left;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .footer-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -114,17 +198,30 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   padding: 15px 16px;
-  margin-right: 12px;
-
+  margin-bottom: 20px;
+     
   color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
+ 
+  @include desktop {
+    max-width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .btn-footer {
+  max-width: 200px;
   display: flex;
   align-items: center;
+  margin-right: auto;
+  margin-left: auto;
 
-  padding: 10px 28px;
+  padding: 10px 26px;
+  @include desktop {
+    margin-right: 0%;
+    margin-left: 0%;
+  }
 }
 
 .send-icon {

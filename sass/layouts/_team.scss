@@ -1,6 +1,10 @@
 .our-team {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+  
+  @include desktop {
+    padding-bottom: 30px;
+  }
 }
 
 .our-team__name {
@@ -22,18 +26,24 @@
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .team-list__item {
-  width: 270px;
-  margin-right: 30px;
+  width: 100%;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   border: none;
   background-color: #ffffff;
   
-  &:nth-child(4n) {
-    margin-right: 0;
+@include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    width: calc((100% - 90px) / 4);
   }
 }
