@@ -17,11 +17,14 @@
 </head>
 
 <body>
-  <!-- <header class="header-border">
+  <header class="header-border">
     <div class="container header-page">
       <a href="./index.html" class="logo link">
         <span>Web</span>Studio
       </a>
+      <button type="button" class="menu-open-btn" data-menu-open><svg class="icon-menu" width="40" height="40">
+          <use href="./images/icons.svg#icon-open-menu"></use>
+        </svg></button>
       <nav class="header-nav">
         <ul class="list header-nav-list">
           <li class="item">
@@ -49,7 +52,53 @@
         </li>
       </ul>
     </div>
-  </header> -->
+    <div class="mob-menu is-hidden" data-menu>
+      <div class="menu-container">
+        <div class="mob-menu-top">
+          <button type="button" class="menu-close-btn" data-menu-close><svg class="icon-menu" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-menu"></use>
+            </svg></button>
+          <ul class="list mob-menu-list">
+            <li class="item">
+              <a href="./index.html" class="link mob-menu-link">Студия</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="link mob-menu-link current">Портфолио</a>
+            </li>
+            <li class="item">
+              <a href="" class="link mob-menu-link">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mob-menu-bottom">
+          <ul class="list menu-contact-list">
+            <li class="item menu-item">
+              <a href="tel:+380961111111" class="link menu-contact tel">+38 096 111 11 11</a>
+            </li>
+            <li class="item menu-item">
+              <a href="mailto:info@devstudio.com" class="link menu-contact mail">info@devstudio.com</a>
+            </li>
+          </ul>
+          <div class="menu-social">
+            <ul class="list menu-social-list">
+              <li class="item menu-social-item">
+                <a href="" class="link menu-social-link">Instagram</a>
+              </li>
+              <li class="item menu-social-item">
+                <a href="" class="link menu-social-link">Twitter</a>
+              </li>
+              <li class="item menu-social-item">
+                <a href="" class="link menu-social-link">Facebook</a>
+              </li>
+              <li class="item menu-social-item">
+                <a href="" class="link menu-social-link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
   <main>
     <section class="section">
       <div class="container">
@@ -75,9 +124,19 @@
           <li class="item">
             <a href="" class="link portfolio-link">
               <div class="portfolio-thumb">
-                <img src="./images/portfolio1.jpg" alt="Проект веб-сайта" width="370" height="294" />
-                <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                  сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                <picture>
+                  <source srcset="./images/portfolio1-1x.jpg 1x, ./images/portfolio1-2x.jpg 2x" media=" (min-width:
+                    1200px)" />
+                  <source srcset="./images/portfolio-tab1-1x.jpg 1x, ./images/portfolio-tab1-2x.jpg 2x" media=" (min-width:
+                    768px)" />
+                  <source srcset="./images/portfolio-mob1-1x.jpg 1x, ./images/portfolio-mob1-2x.jpg 2x" media=" (min-width:
+                    320px)" />
+                  <img src="./images/portfolio-mob1-1x.jpg" alt="Проект веб-сайта" width="450" height="294" />
+                </picture>
+                <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала
+                  и
+                  сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
+                </p>
               </div>
               <div class="portfolio-projects">
                 <h2 class="portfolio-title">Технокряк</h2>
@@ -88,7 +147,15 @@
           <li class="item">
             <a class="link portfolio-link" href="">
               <div class="portfolio-thumb">
-                <img src="./images/portfolio2.jpg" alt="Проект постера" width="370" height="294" />
+                <picture>
+                  <source srcset="./images/portfolio2-1x.jpg 1x, ./images/portfolio2-2x.jpg 2x" media=" (min-width:
+                    1200px)" />
+                  <source srcset="./images/portfolio-tab2-1x.jpg 1x, ./images/portfolio-tab2-2x.jpg 2x" media=" (min-width:
+                    768px)" />
+                  <source srcset="./images/portfolio-mob2-1x.jpg 1x, ./images/portfolio-mob2-2x.jpg 2x" media=" (min-width:
+                    320px)" />
+                  <img src="./images/portfolio-mob2-1x.jpg" alt="Проект постера" width="450" height="294" />
+                </picture>
                 <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
@@ -101,7 +168,15 @@
           <li class="item">
             <a class="link portfolio-link" href="">
               <div class="portfolio-thumb">
-                <img src="./images/portfolio3.jpg" alt="Проект приложения" width="370" height="294" />
+                <picture>
+                  <source srcset="./images/portfolio3-1x.jpg 1x, ./images/portfolio31-2x.jpg 2x" media=" (min-width:
+                    1200px)" />
+                  <source srcset="./images/portfolio-tab3-1x.jpg 1x, ./images/portfolio-tab3-2x.jpg 2x" media=" (min-width:
+                    768px)" />
+                  <source srcset="./images/portfolio-mob3-1x.jpg 1x, ./images/portfolio-mob3-2x.jpg 2x" media=" (min-width:
+                    320px)" />
+                  <img src="./images/portfolio-mob3-1x.jpg" alt="Проект маркетинга" width="450" height="294" />
+                </picture>
                 <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
@@ -114,7 +189,15 @@
           <li class="item">
             <a class="link portfolio-link" href="">
               <div class="portfolio-thumb">
-                <img src="./images/portfolio4.jpg" alt="Проект маркетинга" width="370" height="294" />
+                <picture>
+                  <source srcset="./images/portfolio4-1x.jpg 1x, ./images/portfolio4-2x.jpg 2x" media=" (min-width:
+                    1200px)" />
+                  <source srcset="./images/portfolio-tab4-1x.jpg 1x, ./images/portfolio-tab4-2x.jpg 2x" media=" (min-width:
+                    768px)" />
+                  <source srcset="./images/portfolio-mob4-1x.jpg 1x, ./images/portfolio-mob4-2x.jpg 2x" media=" (min-width:
+                    320px)" />
+                  <img src="./images/portfolio-mob4-1x.jpg" alt="Проект приложения" width="450" height="294" />
+                </picture>
                 <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
@@ -127,7 +210,15 @@
           <li class="item">
             <a class="link portfolio-link" href="">
               <div class="portfolio-thumb">
-                <img src="./images/portfolio5.jpg" alt="Проект приложения" width="370" height="294" />
+                <picture>
+                  <source srcset="./images/portfolio5-1x.jpg 1x, ./images/portfolio5-2x.jpg 2x" media=" (min-width:
+                    1200px)" />
+                  <source srcset="./images/portfolio-tab5-1x.jpg 1x, ./images/portfolio-tab5-2x.jpg 2x" media=" (min-width:
+                    768px)" />
+                  <source srcset="./images/portfolio-mob5-1x.jpg 1x, ./images/portfolio-mob5-2x.jpg 2x" media=" (min-width:
+                    320px)" />
+                  <img src="./images/portfolio-mob5-1x.jpg" alt="Проект веб-сайта" width="450" height="294" />
+                </picture>
                 <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
@@ -140,7 +231,15 @@
           <li class="item">
             <a class="link portfolio-link" href="">
               <div class="portfolio-thumb">
-                <img src="./images/portfolio6.jpg" alt="Проект веб-сайта" width="370" height="294" />
+                <picture>
+                  <source srcset="./images/portfolio6-1x.jpg 1x, ./images/portfolio6-2x.jpg 2x" media=" (min-width:
+                    1200px)" />
+                  <source srcset="./images/portfolio-tab6-1x.jpg 1x, ./images/portfolio-tab6-2x.jpg 2x" media=" (min-width:
+                    768px)" />
+                  <source srcset="./images/portfolio-mob6-1x.jpg 1x, ./images/portfolio-mob6-2x.jpg 2x" media=" (min-width:
+                    320px)" />
+                  <img src="./images/portfolio-mob6-1x.jpg" alt="Проект издания" width="450" height="294" />
+                </picture>
                 <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
@@ -155,7 +254,15 @@
           <li class="item">
             <a class="link portfolio-link" href="">
               <div class="portfolio-thumb">
-                <img src="./images/portfolio7.jpg" alt="Проект издания" width="370" height="294" />
+                <picture>
+                  <source srcset="./images/portfolio7-1x.jpg 1x, ./images/portfolio7-2x.jpg 2x" media=" (min-width:
+                    1200px)" />
+                  <source srcset="./images/portfolio-tab7-1x.jpg 1x, ./images/portfolio-tab7-2x.jpg 2x" media=" (min-width:
+                    768px)" />
+                  <source srcset="./images/portfolio-mob7-1x.jpg 1x, ./images/portfolio-mob7-2x.jpg 2x" media=" (min-width:
+                    320px)" />
+                  <img src="./images/portfolio-mob7-1x.jpg" alt="Проект маркетинга" width="450" height="294" />
+                </picture>
                 <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
@@ -168,7 +275,15 @@
           <li class="item">
             <a class="link portfolio-link" href="">
               <div class="portfolio-thumb">
-                <img src="./images/portfolio8.jpg" alt="Проект маркетинга" width="370" height="294" />
+                <picture>
+                  <source srcset="./images/portfolio8-1x.jpg 1x, ./images/portfolio8-2x.jpg 2x" media=" (min-width:
+                    1200px)" />
+                  <source srcset="./images/portfolio-tab8-1x.jpg 1x, ./images/portfolio-tab8-2x.jpg 2x" media=" (min-width:
+                    768px)" />
+                  <source srcset="./images/portfolio-mob8-1x.jpg 1x, ./images/portfolio-mob8-2x.jpg 2x" media=" (min-width:
+                    320px)" />
+                  <img src="./images/portfolio-mob8-1x.jpg" alt="Проект маркетинга" width="450" height="294" />
+                </picture>
                 <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
@@ -181,7 +296,15 @@
           <li class="item">
             <a class="link portfolio-link" href="">
               <div class="portfolio-thumb">
-                <img src="./images/portfolio9.jpg" alt="Проект приложениея" width="370" height="294" />
+                <picture>
+                  <source srcset="./images/portfolio9-1x.jpg 1x, ./images/portfolio9-2x.jpg 2x" media=" (min-width:
+                    1200px)" />
+                  <source srcset="./images/portfolio-tab9-1x.jpg 1x, ./images/portfolio-tab9-2x.jpg 2x" media=" (min-width:
+                    768px)" />
+                  <source srcset="./images/portfolio-mob9-1x.jpg 1x, ./images/portfolio-mob9-2x.jpg 2x" media=" (min-width:
+                    320px)" />
+                  <img src="./images/portfolio-mob9-1x.jpg" alt="Проект приложения" width="450" height="294" />
+                </picture>
                 <p class="portfolio-card-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
@@ -268,6 +391,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
